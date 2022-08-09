@@ -436,3 +436,5 @@ note
 {% endhint %}
 
 ![](.gitbook/assets/3.png)
+
+> Note:&#x20;
