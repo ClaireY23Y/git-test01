@@ -430,3 +430,9 @@ Note that update command must have where condition to prevent the undesirable up
 ```
 
 [https://www.mturk.com/](https://www.mturk.com/)
+
+{% hint style="info" %}
+note
+{% endhint %}
+
+![](.gitbook/assets/3.png)
