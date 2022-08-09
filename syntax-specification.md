@@ -423,3 +423,10 @@ jsql.select(user.employ_time.dateFormat('%Y-%m-%d %H:%i:%S')).from(user);
 
 ### Updating Data
 
+Note that update command must have where condition to prevent the undesirable update of data.
+
+```
+// 更新所有二部员工，年龄加1var sql = jsql.update(user).set({age: user.age.add(1)}).where(user.dep.eq('二部'));// 返回更新数据的数量repo.update(sql);
+```
+
+[https://www.mturk.com/](https://www.mturk.com/)
