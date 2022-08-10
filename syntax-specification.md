@@ -438,3 +438,48 @@ Note that update command must have where condition to prevent the undesirable up
 ### Deleting Data
 
 Delete command must contain where condition to avoid accidental deletion of all the data.
+
+```
+// Delete note for leave with its number being 001
+var sql = jsql.delete(absence).where(absence.code.eq('001'));
+// Return the number of updated data
+repo.delete(sql);
+```
+
+### Transaction
+
+The transaction is used to control the consistency of multiple data manually to ensure the entirety of success or failure.
+
+The current level of isolation is repeatable-read which eliminates Non-Repeatable Read but still has phantom in it.
+
+```
+//Create transaction
+var tx = services.DataTableService.createTransaction();  
+//Commit transaction
+tx.commit();  
+// Rollback transaction
+tx.rollback();  
+// Close transaction
+tx.close();
+
+
+// Insert two staff; delete one note for leave and ensure the entirety of success or failure
+
+// Create transaction
+var tx = services.DataTableService.createTransaction();
+
+// Update data
+var sql = jsql.insert(user)
+.columns(user.uid, user.name, user.age, user.dep, user.employ_time)
+.values(
+    ['1', "John", 20, 'department2', '2020-10-10 11:30:03'],
+    ['2', "Jack", 30, 'department2', '2020-10-10 11:30:03']
+);
+repo.insert(sql);
+
+
+sql = jsql.delete(absence).where(absence.code.eq('001'));
+
+// Commit transaction
+tx.commit();
+```
