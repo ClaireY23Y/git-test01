@@ -248,9 +248,9 @@ var sql = jsql.select().from(user).where(user.age.between(20, 30))
 ### between, notBetween
 
 ```
-// Select all the staff 查询年龄在20到30之间的所有员工(包含20和30)
+// Select all the staff aging between 20 and 30 (including 20 and 30)
 var sql = jsql.select().from(user).where(user.age.between(20, 30))
-// 查询年龄不在20到30之间的所有员工
+// Select all the staff are not 20-30 years old.
 var sql = jsql.select().from(user).where(user.age.notBetween(20, 30))
 ```
 
