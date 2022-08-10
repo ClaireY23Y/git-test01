@@ -339,7 +339,7 @@ Null parameter
 
 function: subtract string
 
-position： integer, the index of the character to be subtracted
+position: integer, the index of the character to be subtracted
 
 length: integer, length of subtraction
 
@@ -400,7 +400,7 @@ no parameters
 
 function: format the date
 
-format: form. Please refer to mysql documents for details ：https://www.mysqltutorial.org/mysql-date/\_format/
+format: form. Please refer to mysql documents for details：https://www.mysqltutorial.org/mysql-date/\_format/
 
 ```
 // Get the staff id and the employ time: date format: 2020-10-10 11:30:03
