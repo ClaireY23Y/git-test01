@@ -426,13 +426,15 @@ jsql.select(user.employ_time.dateFormat('%Y-%m-%d %H:%i:%S')).from(user);
 Note that update command must have where condition to prevent the undesirable update of data.
 
 ```
-// 更新所有二部员工，年龄加1var sql = jsql.update(user).set({age: user.age.add(1)}).where(user.dep.eq('二部'));// 返回更新数据的数量repo.update(sql);
+// Update all the staff in department two, age plus two.
+var sql = jsql.update(user)
+.set({age: user.age.add(1)})
+.where(user.dep.eq('department2'));
+
+// Return the number of updated data
+repo.update(sql);
 ```
 
-[https://www.mturk.com/](https://www.mturk.com/)
+### Deleting Data
 
-{% hint style="info" %}
-note
-{% endhint %}
-
-![](.gitbook/assets/3.png)
+Delete command must contain where condition to avoid accidental deletion of all the data.
