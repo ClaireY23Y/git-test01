@@ -423,7 +423,7 @@ jsql.select(user.employ_time.dateFormat('%Y-%m-%d %H:%i:%S')).from(user);
 
 ### Updating Data
 
-Note that update command must have where condition to prevent the undesirable update of data.
+Note that UPDATE command must have where condition to prevent the undesirable update of data.
 
 ```
 // Update all the staff in department two, age plus two.
@@ -437,7 +437,7 @@ Note that update command must have where condition to prevent the undesirable up
 
 ### Deleting Data
 
-Delete command must contain where condition to avoid accidental deletion of all the data.
+DELETE command must contain where condition to avoid accidental deletion of all the data.
 
 ```
 // Delete note for leave with its number being 001
