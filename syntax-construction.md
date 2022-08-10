@@ -2,7 +2,7 @@
 
 All instances in this manual are used with two types of templates.
 
-* user: Form template displaying staff information with namespace of supos\_employ. Its attributes are as follows.
+* user: Form template displaying staff information with name space of supos\_employ. Its attributes are as follows.
 
 ```
 uid：string type, staff ID
@@ -12,7 +12,7 @@ age: integer type, staff age
 employ_time: date type, entry time
 ```
 
-* absence: Form template of note for leave with namespace of supos\_employ. Its attributes are as follows:
+* absence: Form template of note for leave with name space of supos\_employ. Its attributes are as follows:
 
 ```
 code: string type, code of note for leave.
