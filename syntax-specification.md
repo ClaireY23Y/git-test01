@@ -326,7 +326,7 @@ Supported arithmetic operator:
 
 Function: get absolute value
 
-Null parameter
+No parameter
 
 ```
 // Select all the notes for leave. Return the absolute value of absence days minus 7 
